@@ -1,242 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Нүүр | Unread Today</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link   rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" /> 
     <nav>
-      <div>
-        <i class="fa-solid fa-bars"></i>
-      </div>
-      <div class="logo">
-        <img
-          src="https://unread.today/files/site_meta/b809740220f5b5b4749e697e42df987b.png"
-          alt="unread-logo"
-        />
-        <span></span>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-    </nav>
-
-    <section class="hero">
-      <div class="hero--overlay"></div>
-      <div class="hero--container">
-        <div class="hero--cover">
-          <img
-            src="https://unread.today/files/969a1aed-77a4-45e9-b7b7-3ee2709aaf31/71259b69a2b5202aa97f9810d24f37c7.jpg"
-            alt="jah-khalib"
-          />
+        <div class="navbar-menu">
+            <i class="fa-solid fa-bars fa-lg"></i>
         </div>
-        <div class="hero--information">
-          <div class="hero--content">
-            <p>Өнөөдөр</p>
-            <h2>Бид хэрхэн ажилладаг вэ?</h2>
-            <h1>“Jangsu Korean Steak House”-ийн ахлах тогооч Хан Дун Ү</h1>
-          </div>
-          <div class="hero--author">
-            <div>
-              <h6>Majigsuren Tsogbadral</h6>
-              <p>4 сарын 29, 2024 8 мин</p>
+        <div class="navbar">
+            <div class="navbar-content">
+                <img src="https://unread.today/files/site_meta/b809740220f5b5b4749e697e42df987b.png" alt="unread-logo">
+                <span class="vl"></span>
+                <div class="navbar-search">
+                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                    <input type="search" class="gsearch" placeholder="Хайлт хийх">
+                </div>
             </div>
-          </div>
+            <div class="navbar-info">
+                <span class="span1">Дараагийн нийтлэл:</span>
+                <span class="span2">#RANDOM</span>
+                <a class="span3">Маргааш орно <span class="blue-dot dot1"></span></a>
+            </div>
         </div>
-      </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/UnreadToday/" class="social-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fb link" viewBox="0 0 48 48"><path d="M42,11.5v25c0,3.03-2.47,5.5-5.5,5.5H31V28h3.62c0.51,0,0.94-0.38,1-0.88l0.37-3c0.04-0.28-0.05-0.57-0.24-0.78 C35.56,23.12,35.29,23,35,23h-4v-3.5c0-1.1,0.9-2,2-2h2c0.55,0,1-0.45,1-1v-3.38c0-0.51-0.4-0.94-0.91-0.99 C35.03,12.12,33.62,12,31.83,12c-4.4,0-6.83,2.62-6.83,7.37V23h-4c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h4v14H11.5 C8.47,42,6,39.53,6,36.5v-25C6,8.47,8.47,6,11.5,6h25C39.53,6,42,8.47,42,11.5z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/unreadtoday/" class="social-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ig link "viewBox="0 0 48 48">
+                    <path d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z"></path>
+                    </svg>
+            </a>
+            <a href="https://twitter.com/UnreadToday" class="social-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="tw link" viewBox="0 0 30 30">
+                    <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/unreadmedia" class="social-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="li link" viewBox="0 0 30 30">
+                    <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero--container">
+            <div class="hero--overlay"></div>
+            <div class="hero--cover">
+                <img src="https://unread.today/files/e8e08e0b-2c4f-4f62-83e2-43a512c166d6/45a6759e3f8e0400fadb10502b8f6309.jpg" alt="jah-khalib">
+            </div>
+            <div class="hero--information">
+                <div class="hero--content">           
+                    <h5>Өнөөдөр</h5>
+                    <h2>Чөлөөт</h2>
+                    <h1>“Улаанбаатар” медиа урлагийн наадам - “Харж буйдаа итгэхүй” </h1>
+                </div>
+                <div class="hero--author">
+                    <img src="https://unread.today/files/profile/452a23488f336be1094232a7cb0e83bd.jpg" alt="">
+                    <div class="hero--author-inf">
+                        <h6>Tsengeg Enkhbayar</h6>
+                        <span>5 сарын 9, 2024</span>
+                        <span class="pre-dot">5 мин</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <div class="scroll--header">
+        <h1>Редакцын сонголт</h1>
+    </div>
 
     <section class="scroll">
-      <h2>Редакцын сонголт</h2>
-
-      <div class="scroll--container">
-        <div class="scroll--card" id="scroll-card-1">
-          <div class="scroll-card--overlay"></div>
-          <div class="scroll-card--head">
-            <div></div>
-            <p>7 минут</p>
-          </div>
-          <div class="scroll-card--content">
-            <div class="scroll-card--content-icons">
-              <div>
-                <i class="fa-solid fa-eye"></i>
-                3306
-              </div>
-              <div>
-                <i class="fa-solid fa-message"></i>
-                0
-              </div>
+        <div class="scroll--container">
+            <div class="scroll--card" id="card-1">
+                    <div class="scroll--card--header">
+                        <span class="blue-dot"></span>
+                        <span>13 мин</span>
+                    </div>
+                    <div class="meta">
+                            <span class="scroll--card--color">
+                                <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2531
+                            </span>
+                            <span class="scroll--card--color">
+                                <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                            </span>
+                        <div class="scroll--card--title">Бетон - Суурин иргэншлийн суурь хэрэгцээ</div>
+                        <div class="scroll--card--category">Тайлбарлах нь</div>
+                    </div>
+                </div>
+            <div class="scroll--card" id="card-2">
+                    <div class="scroll--card--header">
+                        <span class="blue-dot"></span>
+                        <span>6 мин</span>
+                    </div>
+                    <div class="meta">
+                            <span class="scroll--card--color">
+                                <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2514
+                            </span>
+                            <span class="scroll--card--color">
+                                <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                            </span>
+                        <div class="scroll--card--title">500 хоног ашиглав: Амьдрал хөнгөвчлөх Arc интернэт хөтөч</div>
+                        <div class="scroll--card--category">Techworm</div>
+                    </div>
             </div>
-            <div class="scroll-card--content-information">
-              <h6>
-                “Nippon Koei” компанийн хот төлөвлөгч, олон улсын зөвлөх, доктор
-              </h6>
-              <span>TECHWORM</span>
+            <div class="scroll--card" id="card-3">
+                <div class="scroll--card--header">
+                    <span class="blue-dot"></span>
+                    <span>6 мин</span>
+                </div>
+                <div class="meta">
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2514
+                        </span>
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                        </span>
+                    <div class="scroll--card--title">500 хоног ашиглав: Амьдрал хөнгөвчлөх Arc интернэт хөтөч</div>
+                    <div class="scroll--card--category">Techworm</div>
+                </div>
             </div>
-          </div>
+            <div class="scroll--card" id="card-4">
+                <div class="scroll--card--header">
+                    <span class="blue-dot"></span>
+                    <span>6 мин</span>
+                </div>
+                <div class="meta">
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2514
+                        </span>
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                        </span>
+                    <div class="scroll--card--title">500 хоног ашиглав: Амьдрал хөнгөвчлөх Arc интернэт хөтөч</div>
+                    <div class="scroll--card--category">Techworm</div>
+                </div>
+            </div>
+            <div class="scroll--card" id="card-5">
+                <div class="scroll--card--header">
+                    <span class="blue-dot"></span>
+                    <span>6 мин</span>
+                </div>
+                <div class="meta">
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2514
+                        </span>
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                        </span>
+                    <div class="scroll--card--title">500 хоног ашиглав: Амьдрал хөнгөвчлөх Arc интернэт хөтөч</div>
+                    <div class="scroll--card--category">Techworm</div>
+                </div>
+            </div>
+            <div class="scroll--card" id="card-6">
+                <div class="scroll--card--header">
+                    <span class="blue-dot"></span>
+                    <span>6 мин</span>
+                </div>
+                <div class="meta">
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2514
+                        </span>
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                        </span>
+                    <div class="scroll--card--title">500 хоног ашиглав: Амьдрал хөнгөвчлөх Arc интернэт хөтөч</div>
+                    <div class="scroll--card--category">Techworm</div>
+                </div>
+            </div>
+            <div class="scroll--card" id="card-7">
+                <div class="scroll--card--header">
+                    <span class="blue-dot"></span>
+                    <span>6 мин</span>
+                </div>
+                <div class="meta">
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/eye-white.png" width="21" alt="">2514
+                        </span>
+                        <span class="scroll--card--color">
+                            <img src="https://unread.today/img/logo/comment-white.png" width="15" alt="">0
+                        </span>
+                    <div class="scroll--card--title">500 хоног ашиглав: Амьдрал хөнгөвчлөх Arc интернэт хөтөч</div>
+                    <div class="scroll--card--category">Techworm</div>
+                </div>
+            </div>
         </div>
-
-        <div class="scroll--card" id="scroll-card-2">
-          <div class="scroll-card--overlay"></div>
-          <div class="scroll-card--head">
-            <div></div>
-            <p>7 минут</p>
-          </div>
-          <div class="scroll-card--content">
-            <div class="scroll-card--content-icons">
-              <div>
-                <i class="fa-solid fa-eye"></i>
-                3306
-              </div>
-              <div>
-                <i class="fa-solid fa-message"></i>
-                0
-              </div>
-            </div>
-            <div class="scroll-card--content-information">
-              <h6>
-                “Nippon Koei” компанийн хот төлөвлөгч, олон улсын зөвлөх, доктор
-              </h6>
-              <span>TECHWORM</span>
-            </div>
-          </div>
-        </div>
-        <div class="scroll--card" id="scroll-card-3">
-          <div class="scroll-card--overlay"></div>
-          <div class="scroll-card--head">
-            <div></div>
-            <p>7 минут</p>
-          </div>
-          <div class="scroll-card--content">
-            <div class="scroll-card--content-icons">
-              <div>
-                <i class="fa-solid fa-eye"></i>
-                3306
-              </div>
-              <div>
-                <i class="fa-solid fa-message"></i>
-                0
-              </div>
-            </div>
-            <div class="scroll-card--content-information">
-              <h6>
-                “Nippon Koei” компанийн хот төлөвлөгч, олон улсын зөвлөх, доктор
-              </h6>
-              <span>TECHWORM</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll--card" id="scroll-card-4">
-          <div class="scroll-card--overlay"></div>
-          <div class="scroll-card--head">
-            <div></div>
-            <p>7 минут</p>
-          </div>
-          <div class="scroll-card--content">
-            <div class="scroll-card--content-icons">
-              <div>
-                <i class="fa-solid fa-eye"></i>
-                3306
-              </div>
-              <div>
-                <i class="fa-solid fa-message"></i>
-                0
-              </div>
-            </div>
-            <div class="scroll-card--content-information">
-              <h6>
-                “Nippon Koei” компанийн хот төлөвлөгч, олон улсын зөвлөх, доктор
-              </h6>
-              <span>TECHWORM</span>
-            </div>
-          </div>
-        </div>
-        <div class="scroll--card" id="scroll-card-5">
-          <div class="scroll-card--overlay"></div>
-          <div class="scroll-card--head">
-            <div></div>
-            <p>7 минут</p>
-          </div>
-          <div class="scroll-card--content">
-            <div class="scroll-card--content-icons">
-              <div>
-                <i class="fa-solid fa-eye"></i>
-                3306
-              </div>
-              <div>
-                <i class="fa-solid fa-message"></i>
-                0
-              </div>
-            </div>
-            <div class="scroll-card--content-information">
-              <h6>
-                “Nippon Koei” компанийн хот төлөвлөгч, олон улсын зөвлөх, доктор
-              </h6>
-              <span>TECHWORM</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <section>
-      <div class="mid-part">
+
+    <section class="article">
+        <div class="article-card">
+            <div class="article-author">
+                <div class="hero--author">
+                    <img src="https://unread.today/files/profile/28e7a237c46d3ead44c9f507094c922b.jpg">
+                    <div class="hero--author-inf">
+                        <h6>Burtguljin Enkhbat</h6>
+                        <span>4 сарын 30, 2024</span>
+                        <span class="pre-dot">8 мин</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <span class="blue-dot"></span>
+                <div>
+                    <p>Чөлөөт</p>
+                    <h1>Хөлбөмбөгт олон талт байдал яагаад чухал вэ?</h1>
+                </div>
+                <img src="https://unread.today/files/ab36d712-71ff-4ad9-896e-6ebb29ee892b/c6fdf3dc1ab0df88de77de5232c5f4c7.jpg" alt="">
+            </div>
+        </div>
+        <div class="article-card">
+            <div class="article-author">
+                <div class="hero--author">
+                    <img src="https://unread.today/files/profile/91cd813b12beb8323a656b349556e879.jpg" alt="">
+                    <div class="hero--author-inf">
+                        <h6>Majigsuren Tsogbadrakh</h6>
+                        <span>4 сарын 30, 2024</span>
+                        <span class="pre-dot">3 мин</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <span class="blue-dot"></span>
+                <div>
+                    <p>Чөлөөт</p>
+                    <h1>Монголыг зорин ирж буй Казахстан реппер Жах Халиб гэж хэн бэ?</h1>
+                </div>
+                <img src="https://unread.today/files/969a1aed-77a4-45e9-b7b7-3ee2709aaf31/d8ba5b16449f2b86a48e0cd0901602cb.png">
+            </div>
+        </div>
+        <div class="article-card">
+            <div class="article-author">
+                <div class="hero--author">
+                    <img src="https://unread.today/files/profile/00b063d23a6c69f2b1482fa084fddbf5.jpg">
+                    <div class="hero--author-inf">
+                        <h6>Unread Today</h6>
+                        <span>4 сарын 30, 2024</span>
+                        <span class="pre-dot">6 мин</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <span class="blue-dot"></span>
+                <div>
+                    <p>Чөлөөт</p>
+                    <h1>Зочин нийтлэлчийн булан: Сонгуулийн стратеги - Сөрөг сурталчилгаа үр дүнтэй юу?</h1>
+                </div>
+                <img src="https://unread.today/files/5409fb7e-6b28-4095-834c-ece240290ec2/2489e79186ca803b94e23d967420da96.jpg">
+            </div>
+        </div>
+    </section>
+    
+    <section class="prevweek">
         <div class="container">
-          <div class="top-card img" id="a">
-            <div class="blur blur-top">
-              <span> 7 min </span>
-              <h6 class="category">7 Хоногийн Тойм</h6>
-              <h4 class="title">
-                Microsoft-ийн амбиц + Apple-ийн буцаалт + Linkedin-ийн тоглоом
-              </h4>
+            <div class="container1">
+                <div class="items1 item">
+                    <div class="content">
+                        <span>7 мин</span>
+                        <h5>7 Хоногийн Тойм</h5>
+                        <h6>Microsoft-ийн амбиц + Apple-ийн буцаалт + Linkedin-ийн тоглоом</h6>
+                    </div>
+                </div>
+                <div class="container1-bottom">
+                    <div class="items2 item">
+                        <div class="content2">
+                            <span>7 мин</span>
+                            <h5>Онцлох бизнес</h5>
+                            <h6>Шинэ Сонголт: Өргөн сонголт, Шилмэл материал</h6>
+                        </div>
+                    </div>
+                    <div class="items3 item">
+                        <div class="content2">
+                            <span style="background-color: #5e5e5e;">15 мин</span>
+                            <h5>Би хэрхэн ажилладаг вэ?</h5>
+                            <h6>“Sound Meditation Mongolia” компанийн</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="mini-card-container">
-            <div class="mini-card img" id="b">
-              <div class="blur blur-bot"></div>
+            <div class="container2">
+                <div class="container2-top">
+                    <div class="items4 item">
+                        <div class="content2">
+                            <span style="background-color:#1e2126;">9 мин</span>
+                            <h5>Номын тухай</h5>
+                            <h6>Cтивен Кинг: Бичихүйн тухай номоос шүүрэх 6 санаа</h6>
+                        </div>
+                    </div>
+                    <div class="items5 item">
+                        <div class="content2">
+                            <span style="background-color:#95443d95;">8 мин</span>
+                            <h5>Зочинтой булан</h5>
+                            <h6>Amazon компанийн Ханган нийлүүлэлтийн сүлжээний...</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2-bottom">
+                    <div class="items6 item">
+                        <div class="content2">
+                            <span style="background-color:#28753f;">8 мин</span>
+                            <h5>Чөлөөт</h5>
+                            <h6>Хөлбөмбөгт олон талт байдал яагаад чухал вэ? </h6>
+                        </div>
+                    </div>
+                    <div class="items7 item">
+                        <div class="content2">
+                            <span style="background-color: #767171;">3 мин</span>
+                            <h5>Чөлөөт</h5>
+                            <h6>Монголыг зорин ирж буй Казахстан реппер Жах Хал...</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mini-card img" id="c">
-              <div class="blur blur-bot"></div>
-            </div>
-          </div>
         </div>
-        <div class="container" id="r-con">
-          <div class="first">
-            <div class="mini-card-top img" id="d">
-              <div class="blur blur-r-top"></div>
+        <div class="container3">
+            <div class="items8 item">
+                <div class="content">
+                    <span style="background-color: #163e5d;">6 мин</span>
+                    <h5>Чөлөөт</h5>
+                    <h6>Зочин нийтлэлчийн булан: Сонгуулийн стратеги - Сөрөг сурталчилгаа үр дүнтэй юу?</h6>
+                </div>
             </div>
-            <div class="mini-card-top img" id="e">
-              <div class="blur blur-r-top"></div>
-            </div>
-          </div>
-          <div class="second">
-            <div class="mini-card-bottom img" id="f">
-              <div class="blur blur-r-bot"></div>
-            </div>
-            <div class="mini-card-bottom img" id="g">
-              <div class="blur blur-r-bot"></div>
-            </div>
-          </div>
+            <div class="items9 item"></div>
         </div>
-        <div class="top-card img" id="i">
-          <div class="blur blur-top"></div>
-        </div>
-        <div class="top-card img"></div>
-      </div>
-      <div class="footer--top"></div>
     </section>
-  </body>
-  <footer>
-    <div class="footer">
-      <div class="footer--main"></div>
-    </div>
-  </footer>
+
+    <div class="footer-top"></div>
+
+    <footer>
+        <div class="footer--top">
+            <div class="footer1">
+                <img src="/unredlogo.png" width="134.5" alt="">
+                <div class="footer-button1 button">
+                    <div class="footer-button-content">
+                        <p class="footer-button-text1">Хамтран ажиллах хүсэлт илгээх</p>
+                        <p class="footer-button-text2">Контент нийтлүүлэх</p>
+                    </div>
+                    <span class="angle-right">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </div>
+                <div class="footer-button2 button">
+                    <div class="footer-button-content">
+                        <p class="footer-button-text1">Хамтран ажиллах хүсэлт илгээх</p>
+                        <p class="footer-button-text2">Эвент дээр хамтрах</p>
+                    </div>
+                    <span class="angle-right">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </div>
+                <div class="footer-img">
+                    <img src="https://unread.today/img/app_android.png" alt="">
+                    <img src="https://unread.today/img/app_ios.png" alt="">
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer2-header">
+                    <span>Редакцын бодлого</span>
+                    <span class="pre-dot2">Блог</span>
+                    <span class="pre-dot2">Ажлын байр</span>
+                    <span class="pre-dot2">Холбогдох</span>
+                </div>
+                <p>© 2015-2024 Анрид Медиа ХХК. Бүх эрх хуулиар хамгаалагдсан. Контентуудыг зөвшөөрөлгүйгээр болон дурдалгүйгээр нийтлэх, хэвлэх, эш татахыг хориглоно.</p>
+                <div class="footer-footer">
+                    <div class="footer-footer-top">
+                        <div class="footer-card">
+                            <h5>Булангууд</h5>
+                            <p>Онцлох бизнес</p>
+                            <p>Techworm</p>
+                            <p>Би хэрхэн ажилладаг вэ?</p>
+                            <p>Мэдүүштэй</p>
+                            <p>Чөлөөт</p>
+                            <p>Номын тухай</p>
+                            <p>7 хоногийн тойм</p>
+                        </div>
+                        <div class="footer-card">
+                            <h5></h5>
+                            <p>Өртөөлөгчид</p>
+                            <p>Тогтвортой хөгжил</p>
+                            <p>Тайлбарлах нь</p>
+                            <p>10 ертөнц, 10 өнцөг </p>
+                            <p>Таатай оффис</p>
+                            <p>Зочинтой булан</p>
+                            <p>8 минутын улс төр</p>
+                        </div>
+                    </div>
+                    <div class="footer-footer-bottom">
+                        <div class="footer-card">
+                            <h5>Компани</h5>
+                            <p>Улаанбаатар 14240</p>
+                            <p>СБД, 8-р хороо, Амарын гудамж, </p>
+                            <p>Тэнгэрлиг медиа групп</p>
+                            <p>+976 9973 1632</p>
+                            <p>+976 8801 3893</p>
+                            <p></p>
+                            <p>Зочлох:</p>
+                            <p style="opacity: 1 !important; cursor: pointer;">www.unread.media</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="social-links2">
+                <a href="https://www.facebook.com/UnreadToday/" class="social-link2" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="fb link2" viewBox="0 0 48 48"><path d="M42,11.5v25c0,3.03-2.47,5.5-5.5,5.5H31V28h3.62c0.51,0,0.94-0.38,1-0.88l0.37-3c0.04-0.28-0.05-0.57-0.24-0.78 C35.56,23.12,35.29,23,35,23h-4v-3.5c0-1.1,0.9-2,2-2h2c0.55,0,1-0.45,1-1v-3.38c0-0.51-0.4-0.94-0.91-0.99 C35.03,12.12,33.62,12,31.83,12c-4.4,0-6.83,2.62-6.83,7.37V23h-4c-0.55,0-1,0.45-1,1v3c0,0.55,0.45,1,1,1h4v14H11.5 C8.47,42,6,39.53,6,36.5v-25C6,8.47,8.47,6,11.5,6h25C39.53,6,42,8.47,42,11.5z"></path></svg>
+                </a>
+                <a href="https://twitter.com/UnreadToday" class="social-link2" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="tw link2" viewBox="0 0 30 30">
+                        <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/unreadtoday/" class="social-link2" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ig link2"viewBox="0 0 48 48">
+                        <path d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z"></path>
+                        </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/unreadmedia" class="social-link2" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="li link2" viewBox="0 0 30 30">
+                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCfJkXzS4l7Rbq5rRgvHdsKw" class="social-link2" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="yt link2" viewBox="0 0 50 50">
+                        <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"></path>
+                        </svg>
+                </a>
+                <a href="https://soundcloud.com/unreadtoday" class="social-link2" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sc link2" viewBox="0 0 50 50">
+                        <path d="M 30 11 C 26.398438 11 23 12.789063 21 15.6875 L 21 36 L 42.5 36 C 46.601563 36 50 32.601563 50 28.5 C 50 24.398438 46.601563 21 42.5 21 C 42 21 41.5 21.085938 41 21.1875 C 40.5 15.488281 35.800781 11 30 11 Z M 17 16 C 16.300781 16 15.601563 16.085938 15 16.1875 L 15 36 L 17 36 Z M 18 16 L 18 36 L 20 36 L 20 16.5 C 19.398438 16.300781 18.699219 16.101563 18 16 Z M 14 16.5 C 13.300781 16.800781 12.601563 17.101563 12 17.5 L 12 36 L 14 36 Z M 11 18.3125 C 10.199219 19.011719 9.5 19.90625 9 20.90625 L 9 36 L 11 36 Z M 6.5 22 C 6.324219 22.011719 6.148438 22.042969 6 22.09375 L 6 35.90625 C 6.300781 36.007813 6.699219 36 7 36 L 8 36 L 8 22.09375 C 7.699219 21.992188 7.300781 22 7 22 C 6.851563 22 6.675781 21.988281 6.5 22 Z M 5 22.3125 C 4.300781 22.511719 3.601563 22.8125 3 23.3125 L 3 34.6875 C 3.601563 35.085938 4.300781 35.488281 5 35.6875 Z M 2 24.09375 C 0.800781 25.394531 0 27.101563 0 29 C 0 30.898438 0.800781 32.605469 2 33.90625 Z"></path>
+                        </svg>
+                </a>
+            </div>
+        </div>
+       
+    </footer>
+
+
+
+</body>
 </html>
